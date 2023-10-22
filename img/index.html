@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jóvenes Creativos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RVpymzKYHTh7SjKULZ45g7Zu4wd4n1HyH9/UWSLtzjyQbYnYfqD8z5P5Bh13ZK5HtF5W5MW9JFhjK/7OnbYJzQ==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.comas/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <a class="navbar-brand" href="#">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Coca-Cola_logo_white.png/640px-Coca-Cola_logo_white.png" alt="Logo" class="logo-img">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#inicio">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">Acerca de</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team">Equipo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Proyectos y Cursos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Habilidades</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Portada -->
+<section id="inicio" class="d-flex align-items-center justify-content-center vh-100 bg-black">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-white">
+          <div class="d-flex flex-column h-100 justify-content-center">
+            <h1 class="typing-text">Bienvenidos a TEACH</h1>
+            <p>¡Somos un equipo de jóvenes talentosos listos para mostrar nuestras habilidades y proyectos!</p>
+            <!-- Redes Sociales -->
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-right">
+          <img src="ft/verdadera.png" alt="Team" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>// Efecto de aparición dinámica al cargar la página
+    window.addEventListener('load', () => {
+        const inicio = document.querySelector('#inicio');
+        inicio.style.opacity = 1;
+        inicio.style.transform = 'translateY(0)';
+      
+        const socialIcons = document.querySelectorAll('.social-icon');
+        socialIcons.forEach((icon, index) => {
+          setTimeout(() => {
+            icon.style.transform = 'scale(1)';
+          }, 300 * (index + 1));
+        });
+      });</script>
+      <script>// JavaScript para el efecto de máquina de escribir infinita
+        const typingText = document.querySelector(".typing-text");
+        const text = "Bienvenidos a tech";
+        let index = 0;
+        
+        function type() {
+          typingText.textContent = text.slice(0, index);
+          index++;
+        
+          if (index > text.length) {
+            index = 0;
+          }
+        
+          setTimeout(type, 300);
+        }
+        
+        type();
+        </script>
+  
+ <!-- Servicios -->
+<div class="service" id="services">
+  <div class="container">
+    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>Nuestros Servicios</p>
+      <h2>Calidad en Nuestros Trabajos</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="service-text">
+            <h3>Desarrollo Web</h3>
+            <p>
+              Creamos sitios web a medida, desde páginas estáticas hasta aplicaciones web interactivas y dinámicas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="service-text">
+            <h3>Desarrollo de Apps</h3>
+            <p>
+              Diseñamos y desarrollamos aplicaciones móviles tanto para Android como para iOS, brindando una experiencia óptima para los usuarios.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="service-text">
+            <h3>Diseño Gráfico</h3>
+            <p>
+              Creamos diseños creativos y atractivos para logotipos, banners, tarjetas de presentación y más.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="service-text">
+            <h3>SEO y Marketing Digital</h3>
+            <p>
+              Optimizamos sitios web para mejorar su posicionamiento en los motores de búsqueda y desarrollamos estrategias de marketing digital efectivas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Start -->
+<div class="portfolio" id="services">
+  <div class="container">
+    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>Nuestros Servicios</p>
+      <h2>Portafolio de Excelentes Trabajos</h2>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul id="portfolio-filter">
+          <li data-filter="*" class="filter-active">Todos</li>
+          <li data-filter=".filter-web">Desarrollo Web</li>
+          <li data-filter=".filter-apps">Aplicaciones Móviles</li>
+          <li data-filter=".filter-report">Informes Power BI</li>
+          <li data-filter=".filter-systems">Proyectos de Sistemas con Python</li>
+          <li data-filter=".filter-html">Creación de Páginas Web con HTML/CSS/JS</li>
+          <li data-filter=".filter-database">Proyectos de Bases de Datos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row portfolio-container">
+      <!-- Aquí agregamos los elementos del portafolio según los servicios -->
+      <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.0s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="ft/WEB1.png" alt="Desarrollo Web">
+          </div>
+          <div class="portfolio-text">
+            <h3>Desarrollo Web</h3>
+            <a class="btn" href="" data-lightbox="portfolio">+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-apps wow fadeInUp" data-wow-delay="0.2s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="ft/movil.jpg">
+          </div>
+          <div class="portfolio-text">
+            <h3>Aplicaciones Móviles</h3>
+            <a class="btn" href="img/portfolio-apps.jpg" data-lightbox="portfolio">+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-report wow fadeInUp" data-wow-delay="0.4s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="ft/158679691-businessman-hace-una-presentación-cerca-de-un-informe-con-gráficos-y-tablas-el-orador-conduce-el.jpg" alt="Informes Power BI">
+          </div>
+          <div class="portfolio-text">
+            <h3>Informes Power BI</h3>
+            <a class="btn" href="" data-lightbox="portfolio">+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-systems wow fadeInUp" data-wow-delay="0.6s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="ft/python.png" alt="Proyectos de Sistemas con Python">
+          </div>
+          <div class="portfolio-text">
+            <h3>Proyectos de Sistemas con Python</h3>
+            <a class="btn" href="img/portfolio-python.jpg" data-lightbox="portfolio">+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-html wow fadeInUp" data-wow-delay="0.8s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="ft/htmlcss.jpg" alt="Creación de Páginas WHTML/CSS/JS">
+          </div>
+          <div class="portfolio-text">
+            <h3>Creación de Páginas Web con HTML/CSS/JS</h3>
+            <a class="btn" href="img/portfolio-html.jpg" data-lightbox="portfolio">+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-database wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="ft/4439558.png" alt="Proyectos de Bases de Datos">
+          </div>
+          <div class="portfolio-text">
+            <h3>Proyectos de Bases de Datos</h3>
+            <a class="btn" href="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/283585i32E35734ADB2BDF9" data-lightbox="portfolio">+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio End -->
+<!-- Sección de Teams -->
+<section id="team" class="bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <p>Nuestro Equipo</p>
+        <h2>Jóvenes Creativos</h2>
+      </div>
+      <div class="row">
+        <!-- Miembro 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-img">
+              <img src="https://static.vecteezy.com/system/resources/previews/010/998/283/non_2x/3d-programmer-pc-illustration-side-view-free-png.png" alt="Miembro del Equipo 1">
+              <div class="team-overlay">
+                <div class="team-social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Nombre del Miembro 1</h3>
+              <p>Descripción breve sobre el miembro 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="team-img">
+              <img src="ft/pr.webp" alt="Miembro del Equipo 2">
+              <div class="team-overlay">
+                <div class="team-social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Nombre del Miembro 2</h3>
+              <p>Descripción breve sobre el miembro 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-img">
+              <img src="https://static.vecteezy.com/system/resources/previews/010/998/283/non_2x/3d-programmer-pc-illustration-side-view-free-png.png" alt="Miembro del Equipo 3">
+              <div class="team-overlay">
+                <div class="team-social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Nombre del Miembro 3</h3>
+              <p>Descripción breve sobre el miembro 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card wow fadeInUp" data-wow-delay="0.4s">
+            <div class="team-img">
+              <img src="https://static.vecteezy.com/system/resources/previews/010/998/283/non_2x/3d-programmer-pc-illustration-side-view-free-png.png" alt="Miembro del Equipo 4">
+              <div class="team-overlay">
+                <div class="team-social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Nombre del Miembro 4</h3>
+              <p>Descripción breve sobre el miembro 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card wow fadeInUp" data-wow-delay="0.5s">
+            <div class="team-img">
+              <img src="https://static.vecteezy.com/system/resources/previews/010/998/283/non_2x/3d-programmer-pc-illustration-side-view-free-png.png" alt="Miembro del Equipo 5">
+              <div class="team-overlay">
+                <div class="team-social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Nombre del Miembro 5</h3>
+              <p>Descripción breve sobre el miembro 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card wow fadeInUp" data-wow-delay="0.6s">
+            <div class="team-img">
+              <img src="ft/pr.webp" alt="Miembro del Equipo 6">
+              <div class="team-overlay">
+                <div class="team-social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Nombre del Miembro 6</h3>
+              <p>Descripción breve sobre el miembro 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sección de Habilidades -->
+<section id="habilidades" class="bg-light">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Nuestras Habilidades</h2>
+      <p>Domina diversas tecnologías</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="habilidad-item">
+          <i class="fab fa-html5"></i>
+          <h3>HTML</h3>
+          <p>Creación de contenido web</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="habilidad-item">
+          <i class="fab fa-css3"></i>
+          <h3>CSS</h3>
+          <p>Diseño y estilos atractivos</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="habilidad-item">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>Interactividad y dinamismo</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="habilidad-item">
+          <i class="fas fa-code"></i>
+          <h3>.NET</h3>
+          <p>Desarrollo de aplicaciones</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="habilidad-item">
+          <i class="fab fa-python"></i>
+          <h3>Python</h3>
+          <p>Programación versátil</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="habilidad-item">
+          <i class="fas fa-database"></i>
+          <h3>SQL Server</h3>
+          <p>Gestión de bases de datos</p>
+        </div>
+      </div>
+      <!-- Agrega más habilidades aquí -->
+    </div>
+  </div>
+</section>
+
+  <!-- Sección de Cursos -->
+<section id="cursos" class="bg-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cursos Disponibles</h2>
+        <p>Elige entre nuestros cursos especializados</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="curso-item">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Estadística</h3>
+            <p>Curso de estadística para análisis de datos</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="curso-item">
+            <i class="fas fa-file-excel"></i>
+            <h3>Excel</h3>
+            <p>Curso de Excel para manejo de hojas de cálculo</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="curso-item">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Power BI</h3>
+            <p>Curso de Power BI para visualización de datos</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="curso-item">
+            <i class="fas fa-database"></i>
+            <h3>Base de Datos</h3>
+            <p>Curso de Base de Datos para diseño y gestión de bases de datos</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="curso-item">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+            <p>Curso de Python para desarrollo de aplicaciones y análisis de datos</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="curso-item">
+            <i class="fab fa-html5"></i>
+            <h3>Diseño Web</h3>
+            <p>Curso de Diseño Web con HTML, CSS y JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contacto -->
+<section id="contacto" class="contact-section bg-black">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-description">¿Listo para trabajar juntos? ¡Contáctanos!</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <h3 class="info-title">Información de Contacto</h3>
+            <ul class="info-list">
+              <li><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal #123, Ciudad</li>
+              <li><i class="fas fa-envelope"></i> Email: info@example.com</li>
+              <li><i class="fas fa-phone-alt"></i> Teléfono: +123 456 7890</li>
+            </ul>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-contact">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+<footer class="footer bg-dark py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4">
+              <div class="footer-logo">
+                  <h2 class="logo-text">Jóvenes Creativos</h2>
+              </div>
+              <p class="footer-description">¡Explora el mundo de la creatividad y la innovación junto a nosotros!</p>
+              <div class="social-icons mt-3">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+          <div class="col-lg-8">
+              <div class="row">
+                  <div class="col-md-4">
+                      <h3 class="footer-title">Explora</h3>
+                      <ul class="footer-links">
+                          <li><a href="#inicio">Inicio</a></li>
+                          <li><a href="#about">Acerca de</a></li>
+                          <li><a href="#team">Equipo</a></li>
+                          <li><a href="#projects">Proyectos y Cursos</a></li>
+                          <li><a href="#skills">Habilidades</a></li>
+                          <li><a href="#contacto">Contacto</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-8">
+                      <h3 class="footer-title">Suscríbete</h3>
+                      <p>Recibe las últimas noticias y actualizaciones directamente en tu bandeja de entrada.</p>
+                      <form class="subscribe-form d-flex">
+                          <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                          <button type="submit" class="btn btn-subscribe ml-2">Suscribirse</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
